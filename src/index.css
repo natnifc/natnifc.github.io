@@ -1,0 +1,62 @@
+:root {
+  --bg: #000000;
+  --fg: #ffffff;
+  --dim: #888888;
+  --border: #333333;
+  --mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo,
+    Consolas, monospace;
+
+  color-scheme: dark;
+  font: 16px/1.5 var(--mono);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--mono);
+  font-weight: 600;
+  margin: 0;
+  color: var(--fg);
+}
+
+p {
+  margin: 0;
+  color: var(--dim);
+}
+
+a {
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+a:hover {
+  border-bottom-color: var(--fg);
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
